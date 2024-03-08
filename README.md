@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>Heads or Tails Game</H1>
+    <button id="headsButton" >Heads</button>
+    <button id="tailsButton">Tails</button>
+    <p id="result"></p>
+    <script>
+        const headsButton = document.getElementById("headsButton");
+        const tailsButton = document.getElementById("tailsButton");
+        const result = document.getElementById("result");
+
+        headsButton.addEventListener("click", () => {
+            const randomNumber = Math.floor(Math.random() * 2);
+            if (randomNumber === 0) {
+                result.textContent = "You win!";
+            } else {
+                result.textContent = "You lose!";
+            }
+        });
+
+        tailsButton.addEventListener("click", () => {
+            const randomNumber = Math.floor(Math.random() * 2);
+            if (randomNumber === 1) {
+                result.textContent = "You win!";
+            } else {
+                result.textContent = "You lose!";
+            }
+        });
+    </script>
+</body>
+</html>
